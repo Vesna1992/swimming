@@ -1,0 +1,261 @@
+body {
+  color: #151515;
+}
+
+.bgGray {
+  background: #f3f3f3;
+}
+
+.bgOrange {
+  background: linear-gradient(#ffd414, #ff8814);
+}
+
+.bgBlue {
+  background: linear-gradient(#ba1ee1, #2b5ed9);
+}
+
+.bgPink {
+  background: linear-gradient(#ff344b, #ff286b);
+}
+
+.bgPurple {
+  background: linear-gradient(#ff08de, #ba1ee1);
+}
+
+button {
+  border: none;
+  padding: 15px 40px;
+  transition: 0.3s ease;
+  background: linear-gradient(to right, #ff8814, #ff344b);
+  color: #fff;
+}
+button:hover {
+  background: linear-gradient(to right, #ff952e, #ff4e62);
+}
+
+.navbar {
+  padding: 0 50px;
+}
+@media (max-width: 767px) {
+  .navbar {
+    padding: 20px;
+  }
+}
+
+.navbar-nav > .active > a {
+  color: #fff !important;
+  background: linear-gradient(#ff08de, #2b5ed9);
+}
+
+.nav-link {
+  padding: 30px 50px;
+  color: #151515 !important;
+}
+
+.nav-link:hover {
+  color: #ba1ee1 !important;
+}
+
+.navbar-brand {
+  color: #2b5ed9 !important;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.navbar-brand i {
+  font-size: 1rem;
+  position: relative;
+  bottom: 5px;
+}
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+header {
+  background: url(../img/header.jpg);
+  background-position: 50% 20%;
+  background-size: cover;
+  height: 90vh;
+}
+@media (max-width: 767px) {
+  header {
+    height: 50vh;
+  }
+}
+
+.sectionOne {
+  margin-top: -130px;
+  padding: 0 50px;
+}
+@media (max-width: 767px) {
+  .sectionOne {
+    padding: 20px;
+  }
+}
+.sectionOne p {
+  position: relative;
+}
+.sectionOne p i {
+  font-size: 2rem;
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+  padding: 0 20px;
+}
+.sectionOne p i:hover {
+  transform: translateX(10px);
+  color: silver;
+}
+
+.sectionTwo {
+  margin: 0 50px;
+}
+@media (max-width: 767px) {
+  .sectionTwo {
+    margin: 0 20px 20px 20px;
+  }
+}
+.sectionTwo .img {
+  background: url(../img/about1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+
+.sectionThree {
+  margin: 50px;
+}
+@media (max-width: 767px) {
+  .sectionThree {
+    margin: 0 20px;
+  }
+}
+.sectionThree .img {
+  background: url(../img/about2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+@media (max-width: 767px) {
+  .sectionThree .col-md-6:last-child {
+    order: -1;
+  }
+}
+
+.sectionFour {
+  margin: 50px 0;
+  background: url(../img/rated.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+@media (max-width: 767px) {
+  .sectionFour {
+    height: auto;
+  }
+}
+.sectionFour div {
+  margin: 0 50px 0 50px;
+  background: linear-gradient(rgba(255, 52, 75, 0.9), rgba(255, 40, 107, 0.9));
+  width: calc(50% - 50px);
+  padding: 50px;
+  color: #fff;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .sectionFour div {
+    margin: 0 20px 0 20px;
+    width: calc(100% - 40px);
+  }
+}
+@media (min-width: 768px) and (max-width: 870px) {
+  .sectionFour div {
+    width: calc(100% - 100px);
+  }
+}
+.sectionFour div button {
+  background: #fff;
+  color: #151515;
+}
+.sectionFour div button:hover {
+  opacity: 0.9;
+}
+
+.sectionFive {
+  margin: 0 50px;
+}
+@media (max-width: 767px) {
+  .sectionFive {
+    margin: 0 20px;
+  }
+}
+.sectionFive .img {
+  background: url(../img/events.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+
+.sectionSix {
+  margin: 200px 50px 50px 50px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .sectionSix {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .sectionSix .col-lg-2 {
+    margin-top: 170px;
+  }
+}
+@media (max-width: 990px) {
+  .sectionSix .col-lg-2:nth-child(3), .sectionSix .col-lg-2:nth-child(4) {
+    margin-top: 170px;
+  }
+}
+.sectionSix .col-lg-2 p, .sectionSix .col-lg-2 h4 {
+  text-align: left;
+}
+.sectionSix img {
+  border-radius: 50%;
+  margin: -150px 0 20px 0;
+}
+.sectionSix h4 {
+  color: #ff8814;
+}
+
+.sectionSeven {
+  margin: 50px;
+}
+@media (max-width: 767px) {
+  .sectionSeven {
+    margin: 0 20px;
+  }
+}
+.sectionSeven .img {
+  background: url(../img/map.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+.sectionSeven .number {
+  font-size: 2rem;
+}
+.sectionSeven a {
+  font-size: 2rem;
+  color: #fff;
+  margin-right: 10px;
+}
+.sectionSeven a:hover {
+  color: #a7a7a7;
+}
+@media (max-width: 990px) {
+  .sectionSeven .col-md-6 {
+    margin: 20px 0 0 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,242 @@
+// variables
+$fontColor: #151515;
+$gray: #f3f3f3;
+$blue: #2b5ed9;
+$lightBlue: #87a6ea;
+$purple: #ba1ee1;
+$lightPurple: #ff08de;
+$yellow: #ffd414;
+$orange: #ff8814;
+$pink: #ff286b;
+$red: #ff344b;
+$white: #fff;
+$transition: .3s ease;
+
+// mixins
+@mixin bgImg($img) {
+    background: $img;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
+
+// basic styles
+body {
+    color: $fontColor;
+}
+.bgGray {
+    background: $gray;
+}
+.bgOrange {
+    background: linear-gradient($yellow, $orange);
+}
+.bgBlue {
+    background: linear-gradient($purple, $blue);
+}
+.bgPink {
+    background: linear-gradient($red, $pink);
+}
+.bgPurple {
+    background: linear-gradient($lightPurple, $purple);
+}
+button {
+    border: none;
+    padding: 15px 40px;
+    transition: $transition;
+    background: linear-gradient(to right, $orange, $red);
+    color: $white;
+    &:hover {
+       background: linear-gradient(to right, lighten($orange, 5%), lighten($red, 5%));
+    }
+}
+
+// nav
+.navbar {
+    padding: 0 50px;
+    @media (max-width: 767px) {
+        padding: 20px;
+    }
+}
+.navbar-nav > .active > a {
+    color: $white !important;
+    background: linear-gradient($lightPurple, $blue);
+}
+.nav-link {
+    padding: 30px 50px;
+    color: $fontColor !important;
+}
+.nav-link:hover {
+    color: $purple !important;
+}
+.navbar-brand {
+    color: $blue !important;
+    font-size: 1.8rem;
+    font-weight: bold;
+    i {
+        font-size: 1rem;
+        position: relative;
+        bottom: 5px;
+    }
+    @media (max-width: 767px) {
+        font-size: 1.5rem;
+    }
+}
+
+// header
+header {
+    background: url(../img/header.jpg);
+    background-position: 50% 20%;
+    background-size: cover;
+    height: 90vh;
+    @media (max-width: 767px) {
+       height: 50vh;
+    }
+}
+
+// sectionOne
+.sectionOne {
+    margin-top: -130px;
+    padding: 0 50px;
+    @media (max-width: 767px) {
+        padding: 20px;
+    }
+    p {
+        position: relative;
+        i {
+            font-size: 2rem;
+            position: absolute;
+            right: 5%;
+            cursor: pointer;
+            padding: 0 20px;
+            &:hover {
+                transform: translateX(10px);
+                color: darken($gray, 20%);
+            }
+        }
+    }
+}
+
+// sectionTwo
+.sectionTwo {
+    margin: 0 50px;
+    @media (max-width: 767px) {
+        margin: 0 20px 20px 20px;
+    }
+    .img {
+        @include bgImg(url(../img/about1.jpg));
+    }
+}
+
+// sectionThree
+.sectionThree {
+    margin: 50px;
+    @media (max-width: 767px) {
+        margin: 0 20px;
+    }
+    .img {
+        @include bgImg(url(../img/about2.jpg));
+    }
+    .col-md-6:last-child {
+        @media (max-width: 767px) {
+            order: -1;
+        }
+    }
+}
+
+// sectionFour
+.sectionFour {
+    margin: 50px 0;
+    @include bgImg(url(../img/rated.jpg));
+    @media (max-width: 767px) {
+        height: auto;
+    }
+    div {
+        margin: 0 50px 0 50px;
+        background: linear-gradient(rgba($red, .9), rgba($pink, .9));                 
+        width: calc(50% - 50px);
+        padding: 50px;
+        color: $white;
+        height: 100%;
+        @media (max-width: 767px) {
+            margin: 0 20px 0 20px;
+            width: calc(100% - 40px);
+        }
+        @media (min-width: 768px) and (max-width: 870px) {
+            width: calc(100% - 100px);
+        }
+        button {
+            background: $white;
+            color: $fontColor;
+            &:hover {
+                opacity: .9;
+            }
+        }
+    }
+}
+
+// sectionFive
+.sectionFive {
+    margin: 0 50px;
+    @media (max-width: 767px) {
+        margin: 0 20px;
+    }
+    .img {
+       @include bgImg(url(../img/events.jpg));
+    }
+}
+
+// sectionSix
+.sectionSix {
+    margin: 200px 50px 50px 50px;
+    text-align: center;
+    @media (max-width: 767px) {
+        margin: 0 20px;
+    }
+    .col-lg-2 {
+        @media (max-width: 767px) {
+            margin-top: 170px;
+        }
+        &:nth-child(3), &:nth-child(4) {
+            @media (max-width: 990px) {
+                margin-top: 170px;
+            }  
+        }
+        p, h4 {
+            text-align: left;
+        }     
+    }
+    img {
+        border-radius: 50%;
+        margin: -150px 0 20px 0;
+    }
+    h4 {
+        color: $orange;
+    }
+}
+
+// sectionSeven
+.sectionSeven {
+    margin: 50px;
+    @media (max-width: 767px) {
+        margin: 0 20px;
+    }
+    .img {
+        @include bgImg(url(../img/map.jpg));
+    }
+    .number {
+        font-size: 2rem;
+    }
+    a {
+        font-size: 2rem;
+        color: $white;
+        margin-right: 10px;
+        &:hover {
+            color: darken($gray, 30%);
+        }
+    }
+    .col-md-6 {
+        @media (max-width: 990px) {
+            margin: 20px 0 0 0;
+        }
+    }
+}
